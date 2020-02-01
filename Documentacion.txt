@@ -1,0 +1,43 @@
+IDUKAY PRACTICA
+
+Estimado se solicito realizar un programa en JavaScript para cumplir con el ejercicio propuesto por lo cual se lo realizo de la siguiente forma:
+
+Se uso expressJS como framework para realizar la práctica se oriento el ejercicio como WebService de tipo REST para su reutilzación y 
+arquitectura orientada a servicios , ya que el ejercicio planteado posteriormente puede ser consumido desde cualquier plataforma en 
+caso de ser requerido.
+
+Para poder realizar la ejecución del ejercicio seguir los sieguientes pasos:
+
+	-Descargarse la aplicación desde GITHUB(repositorio brindado idukay), se puede usar cualquier intérprete que use comandos git.
+	-Una vez clonado el proyecto instalar las librerias NPM (npm install)
+	-Ejecutar npm start , para inicio del proyecto.
+
+Una vez levantado el programa , desde un intérprete de servicios ejecutar la siguiente url::
+
+URL:	http://localhost:6969/evaluacionPociones/
+TIPO: 	REST
+BODY:  
+		{
+			"numRojas": 2,
+			"numVerdes":2,
+			"numAmarillas":1,
+			"numAzules":1,
+			"numGrises":1
+		}
+		
+RESPONSE:
+
+		{
+			"pocionesUnicas": 5,   			//Número de pociones únicas
+			"pocionesRepetidas": 2, 			//Número de pociones repetidas
+			"numeroCombinacionesPares": 2,		//Número de combinaciones pares
+			"numeroSobranteCombinacionesPares": 1,	//Número de pociones restantes
+			"numeroCombinacionesImpares": 2,		//Número de combinaciones impares
+			"sumAtaqueSimple": 21,			//Suma total de ataque sin combinación
+			"sumAtaqueCombinadoPar": 29,		//Suma total de ataque con combinación par
+			"sumAtaqueCombinadoImpar": 31,	//Suma total de ataque con combinación impar
+			"mejorAtaque": 31				//Mejor combinación de ataque
+		}
+		
+Para ejecutar el UNIT TEST ejecutar "npm test" en este caso son dos escenarios en el cual según la práctica tenemos el escenario 1 
+con 13% de ataque eficiente y el segundo con 31% de ataque eficiente;
